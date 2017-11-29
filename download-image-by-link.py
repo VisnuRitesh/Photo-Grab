@@ -17,7 +17,7 @@ def store_raw_images():
         try:
             print(i)
             urllib.urlretrieve(i, "/imgpath"+str(pic_num)+".jpg")
-            img = cv2.imread("/home/visnu/visopencv/neg"+str(pic_num)+".jpg",cv2.IMREAD_GRAYSCALE)
+            img = cv2.imread("/imgpath"+str(pic_num)+".jpg",cv2.IMREAD_GRAYSCALE)
             # should be larger than samples / pos pic (so we can place our image on it)
             resized_image = cv2.resize(img, (100, 100))
             cv2.imwrite("/imgpath"+str(pic_num)+".jpg",resized_image)
