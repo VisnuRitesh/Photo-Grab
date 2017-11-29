@@ -6,8 +6,8 @@ import urllib
 def store_raw_images():
 
     #Example link
-    neg_images_link = 'http://image-net.org/api/text/imagenet.synset.geturls?wnid=n09618957'   
-    neg_image_urls = urllib.urlopen(neg_images_link).read()
+    urllink=input("Enter link:")   
+    neg_image_urls = urllib.urlopen(urllink).read()
     pic_num = 1
     
     if not os.path.exists('/path'):
